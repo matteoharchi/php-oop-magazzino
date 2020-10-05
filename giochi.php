@@ -1,5 +1,5 @@
 <?php
-include "classes.php";
+require_once "classes.php";
 
 
 $game1 = new Giochi('Eldritch Horror', 60, 14, 'GDR', 8, 'Giochi Uniti', 4);

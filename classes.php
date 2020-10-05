@@ -20,14 +20,26 @@ class Giochi {
         $this->copie = $_copie;
     }
 
-//metodo disponibilità
-public function disponibilita($_copie){
-    if($_copie > 0){
-        $this->disponibilita = true;
-    }else {
-        $this->disponibilita = false;
+    //metodo disponibilità
+    public function disponibilita($_copie){
+        if($_copie > 0){
+            $this->disponibilita = true;
+        }else {
+            $this->disponibilita = false;
+        }
+        return $this->disponibilita;
     }
-    return $this->disponibilita;
-}
 
+}
+class Espansione extends Giochi {
+    public $espansione_per;
+    public function __construct($_nome, $_prezzo, $_etaMinima, $_genere, $_maxGiocatori, $_editore, $_copie){
+        parent::__construct($_nome, $_prezzo, $_etaMinima, $_genere, $_maxGiocatori, $_editore, $_copie);
+    }
+    
+    //metodo espansione_per
+    
+    public function whatFor($espansione, $gameName){
+        $espansione->espansione_per = $gameName;
+    }
 }
